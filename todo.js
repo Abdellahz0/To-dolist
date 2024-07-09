@@ -16,7 +16,7 @@ const deleteButton=document.getElementById("deleteButton");
 
 document.addEventListener("DOMContentLoaded",function (){
     addButton.addEventListener("click",addTask)
-    todoinput.addEventListener("keydown",function(event){
+    todoinput.addEventListener("keydown",event=>{
         if(event.key==="Enter"){
             event.preventDefault();
             addTask();
@@ -55,7 +55,7 @@ function displayTasks() {
         const p = document.createElement("p");
         p.innerHTML = `
         <div class="todo-container">
-        <input type="checkbox" class="todo-checkbox" id="input-${index}" ${
+        <input type="checkbox" class="todo-checkbox"  id="input-${index}"${
         item.disabled ? "checked" : ""
     }>
         <p id="todo-${index}" class="${
